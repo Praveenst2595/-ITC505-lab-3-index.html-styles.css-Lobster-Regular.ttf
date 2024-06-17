@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITC505 Lab 3 - Font Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Delivering a Custom Font to the Client Browser</h1>
+        <p>
+            The process of delivering a custom font to a client browser involves the following steps:
+        </p>
+        <ol>
+            <li>Select a font that you want to use on your webpage. In this example, we are using the "Lobster" font.</li>
+            <li>Host the font file on your server or use a font hosting service like Google Fonts.</li>
+            <li>Use the @font-face CSS rule to specify the font file and its properties.</li>
+            <li>Apply the font to the elements on your webpage using CSS.</li>
+        </ol>
+        <p>
+            Here is the CSS code used to deliver and apply the "Lobster" font:
+        </p>
+        <pre>
+            <code>
+@font-face {
+    font-family: 'Lobster';
+    src: url('Lobster-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'Lobster', Arial, sans-serif;
+}
+            </code>
+        </pre>
+    </div>
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>
